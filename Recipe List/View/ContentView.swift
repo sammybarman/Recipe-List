@@ -12,6 +12,7 @@ struct ContentView: View {
     @ObservedObject var model = RecipeModel()
     var body: some View {
         
+        
         NavigationView{
             
             List(model.recipes){ r in
