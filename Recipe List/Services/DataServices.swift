@@ -29,6 +29,9 @@ class DataServices {
                 var RecipeData = try decoder.decode([Recipe].self, from: data)
                 for r in RecipeData{
                     r.id = UUID()
+                    for i in r.ingredients {
+                        i.id = UUID()
+                    }
                 }
                 return RecipeData
             }
